@@ -1,7 +1,7 @@
 # Tutorial JoKenPo (Papel, Tesoura ou Pedra)
 
 ## Recursos
-Antes de começar, faça o download das imagens utilizadas no projeto neste [link](http://www.google.com).
+Antes de começar, faça o download das imagens utilizadas no projeto neste [link](https://github.com/e104SysDev/jokenpo/tree/main/app/src/main/res/drawable-v24).
 
 ## Step 01 - Criar Projeto
 Crie um novo projeto como de costume e lembrese de escolher a linguagem `Java` e uma `Empty Activity`.
