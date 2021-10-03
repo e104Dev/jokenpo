@@ -4,18 +4,18 @@
 Antes de começar, faça o download das imagens utilizadas no projeto neste [link](https://github.com/e104SysDev/jokenpo/tree/main/app/src/main/res/drawable-v24).
 
 ## Step 01 - Criar Projeto
-Crie um novo projeto como de costume e lembrese de escolher a linguagem `Java` e uma `Empty Activity`.
+Crie um novo projeto como de costume e lembre-se de escolher a linguagem `Java` e uma `Empty Activity`.
 
-Após o projeto concluir o `build` e baixar as dependencias `gradle`, podemos prosseguir.
+Após o projeto concluir o `build` e baixar as dependências `gradle`, podemos prosseguir.
 
-Crie uma nova `Activity` com o identificador `activity_jogo`, lembre-se clieque com o borão diretito do mouse sobre a pasta `app` e selecione `New/Activity/Empty Activity`
+Crie uma nova `Activity` com o identificador `JogoActivity`, lembre-se clieque com o borão diretito do mouse sobre a pasta `app` e selecione `New/Activity/Empty Activity`
 
 ## Step 02 - Incluir os recursos
-Extraia as imagens já baixadas previamente e as copie para a pasta `res/drawable` no projeto Android.
+Adicione as imagens já baixadas previamente e as copie para a pasta `res/drawable` no projeto Android.
 
 ## Step 03 - UI
 Neste passo iremos criar a Inteface Gráfica do projeto; temos duas telas, a tela pricipal (activity_main) e a tela do jogo (activity_jogo).
-O detalhamento da crição das telas estão detalhados nos vídeos das aula 10 e 11, neste tutorial iremos focar na implementação, então logo abaixo serão listados os códigos completos dos arquivos que compõem a interface gráfica de cadas uma das telas.
+O detalhamento da crição das telas estão demonstrados nos vídeos das aula 10 e 11, neste tutorial iremos focar na implementação, então logo abaixo serão listados os códigos completos dos arquivos que compõem a interface gráfica de cadas uma das telas.
 
 ### MainActivity
 Copie o código abaixo para o arquivo `activity_main.xml`.
@@ -240,14 +240,14 @@ Copie o código abaixo para o arquivo `activity_jogo.xml`.
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
-## Step 04 - Implementando as funcionalidadem em Java
+## Step 04 - Implementando as funcionalidades em Java
 Nesta passo iremos implementar as funcionalidades das duas telas utilizando `Java`. 
 
 ### Tela Principal
 
 Esta tela tem por objetivo capturar o nome do jogador e inicializar o Jogo.
 
-Iremos capturar o nome do jogador e enviar o nome capturado para a tela do jogo; seguindo as instruções abaixo na classe `MainActivity`:
+Iremos capturar o nome do jogador e enviar o nome capturado para a tela do jogo, conforme as instruções abaixo na classe `MainActivity`:
 
 1. Declare um objeto da classe TextInputLayout como global.
 ```java
@@ -412,7 +412,7 @@ enum Status {
     }
 ```
 
-2. Crie o método que realiza a jogada do computador, o computador irá sortear um úumero aleatório entre 0 e 2 e cada um destes valores representará `[Papel, Tesoura, Pedras]`, respectivamente. Esta função logo após realizar a trocas das imagens com base no número aleatório, ela devolve o id o objeto que disparou a função.
+2. Crie o método que realiza a jogada do computador, o computador irá sortear um número aleatório entre 0 e 2 e cada um destes valores representará `[Papel, Tesoura, Pedras]`, respectivamente. Esta função realizar a trocas das imagens com base no número aleatório e logo após ela devolve o id o objeto que disparou a função para que possamos reutilizar o retorno com a identificação da jogada realizada.
 Adicione o método abaixo:
 ```java
     public int jogadaComputador() {
@@ -492,7 +492,7 @@ Agora precisamos que uma função realize a jogada do usuário, a jogada do comp
         definirVendedor(jogador, computador);
     }
 ```
-6. Toque final. Adicione a chamada da função `atualizarPlacar` na função `definirVencedor`para atualizar os pontos a cada jogada. Adicione-o à penultima linha do método `definirVencedor`.
+6. Toque final. Adicione a chamada da função `atualizarPlacar` na função `definirVencedor`para atualizar os pontos a cada jogada. Adicione-o à penúltima linha do método `definirVencedor`.
 
 #### Confira o código completo teste o App.
 ```java
